@@ -1,0 +1,19 @@
+@mixin griglia($tablet, $laptop){
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media (min-width:768px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        div.card{flex: $tablet;}
+    }
+    @media (min-width:1024px){div.card{flex: $laptop}}
+}
+
+@mixin flex-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

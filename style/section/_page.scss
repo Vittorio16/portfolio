@@ -1,0 +1,109 @@
+// STYLE OF MAIN
+main {
+    padding-top: 6vh;
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+
+    @include desktop {
+        max-width: 1700px;
+        margin: 0 auto;
+
+        section {
+            height: auto !important;
+        }
+    }
+}
+
+.home {
+    height: 94vh;
+
+    //text content
+    &-text {
+        padding-top: 3.5rem;
+        @include flex-c;
+        flex-direction: column;
+        gap: 1.2rem;
+        justify-content: start;
+        align-items: flex-start;
+
+        a.btn{
+            svg{margin-left: .3rem;}
+        }
+    }
+
+    // image content
+    &-img {
+        img {
+            width: 100%;
+        }
+
+        &-svg {
+            display: none;
+        }
+    }
+
+    // responsive 
+    @include tablet {
+        height: auto;
+
+        //image content
+        &-img {
+            @include flex-c;
+
+            img {
+                max-width: 35vmax;
+            }
+        }
+    }
+
+    @include large {
+        display: flex;
+
+        //text content
+        &-text {
+            flex: 1;
+        }
+
+        //image content
+        &-img {
+            flex: 1;
+
+            img {
+                max-width: 450px !important;
+            }
+        }
+    }
+
+    @include desktop {
+        padding-top: 4.5rem;
+
+        //text content
+        &-text {
+            padding-top: 0;
+        }
+
+        //icon and img content
+        &-img {
+            position: relative;
+
+            &-svg {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                div{
+                    width: 100%;
+                    @include flex-c;
+                    justify-content: space-between;
+                    svg{
+                        width: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

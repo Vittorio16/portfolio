@@ -1,0 +1,16 @@
+//IMPORT VENDOR AND FONT
+
+@import url('https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nunito+Sans&display=swap'); //font-family: 'Baloo 2', cursive; font-family: 'Nunito Sans', sans-serif;
+@import url('https://unpkg.com/swiper/swiper-bundle.min.css');
+
+//IMPORT MIXIN FILE
+@import 'mixin/flex';
+@import 'mixin/cards';
+@import 'mixin/generalmixin';
+
+//IMPORT STYLE FILE 
+@import 'base';
+@import 'section/header';
+@import 'section/footer';
+@import 'section/page';

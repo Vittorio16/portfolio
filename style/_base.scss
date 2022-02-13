@@ -1,0 +1,84 @@
+// Variabili
+
+$bg: #19191B;
+$bg1: #2b2929;
+$color: rgb(233, 233, 233);
+$color1: #848009;
+
+// STILE DI BASE
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   scroll-behavior: smooth;
+   background-color: $bg;
+   color: $color;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+section {
+   padding: 2rem .7rem;
+}
+
+section.bg1 {
+   background-color: $bg1;
+}
+
+
+// STILE BOTTONI
+a.btn-outline,
+button.btn-outline {
+   padding: .4rem 1.3rem;
+   border: 1px solid $color;
+   border-radius: .2rem;
+   transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+   &:hover {
+      color: black;
+      background-color: $color;
+   }
+}
+
+a.btn,
+button.btn {
+   padding: .4rem 1.3rem;
+   background: $color1;
+   border: 1px solid $color1;
+   border-radius: .2rem;
+   transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+   @include flex-c;
+   &:hover {
+      background: transparent;
+   }
+}
+
+// STILE SCROLLBAR E SELECTION TEXT
+
+::selection {
+   color: $bg;
+   background: $color;
+}
+
+::-webkit-scrollbar {
+   width: 5px;
+   height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: $color;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: $color;
+}
+
+::-webkit-scrollbar-track {
+   background: $bg;
+   border-radius: 8px;
+   box-shadow: inset 7px 10px 12px #f0f0f0;
+}
